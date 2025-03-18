@@ -34,6 +34,10 @@ body{
 
         cursor: pointer;
     }
+
+    .add-student-button:hover{
+        background-color: hsla(221, 13%, 28%, 0.9);
+    }
 }
 
 #students_container{
@@ -152,10 +156,20 @@ body{
 
             font-weight: bold;
             font-size: 0.875rem;
+
+            cursor: pointer;
+        }
+
+        .student-card-button:hover{
+            background-color: hsl(220, 14%, 92%);
         }
 
         .github-link{
             color: gray;
+        }
+
+        .github-link:hover{
+            color: #303030;
         }
     }
 }
