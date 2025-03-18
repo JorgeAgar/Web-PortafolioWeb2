@@ -1,0 +1,135 @@
+.main-container{
+    margin: auto;
+    margin-top: 2rem;
+    max-width: 1400px;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 'Segoe UI Symbol';
+}
+
+#back_button{
+    cursor: pointer;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    column-gap: 1rem;
+
+    font-weight: bold;
+    background-color: transparent;
+
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: .75rem;
+    border-style: none;
+
+    svg{
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+#back_button:hover{
+    background-color: hsl(220, 14%, 92%);
+}
+
+.form-container{
+    margin: auto;
+    max-width: 670px;
+
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 1px;
+    border-radius: .75rem;
+
+    h1{
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        margin: 0;
+    }
+
+    #add_student_form{
+        .form-items{
+            padding: 1.5rem;
+            padding-top: 0;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 1.5rem; 
+            grid-template-areas: 
+            "code name"
+            "email github"
+            "photo photo"
+            "description description";
+            justify-items: stretch;
+            align-items: stretch;
+            justify-content: stretch;
+
+            .form-item{
+                
+            }
+
+            .code-box{
+                grid-area: code;
+            }
+
+            .name-box{
+                grid-area: name;
+            }
+
+            .email-box{
+                grid-area: email;
+            }
+
+            .github-box{
+                grid-area: github;
+            }
+
+            .photo-box{
+                grid-area: photo;
+            }
+
+            .description-box{
+                grid-area: description;
+            }
+        }
+        
+        .form-buttons{
+            padding: 1.5rem;
+            padding-top: 0;
+        }
+
+        .button{
+            font-weight: bold;
+            font-size: .875rem;
+
+            padding-inline: 1rem;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+
+            border-radius: .75rem;
+
+            cursor: pointer;
+        }
+
+        #cancel_button{
+            border-style: solid;
+            border-width: 1px;
+            border-color: lightgray;
+            color: black;
+        }
+
+        #cancel_button:hover{
+            background-color: hsl(220, 14%, 92%);
+        }
+
+        #save_button{
+            color: white;
+            background-color: hsl(220, 13%, 28%);
+        }
+
+        #save_button:hover{
+            background-color: hsl(220, 13%, 28%, .9);
+        }
+    }
+}
+

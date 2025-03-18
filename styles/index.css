@@ -33,10 +33,12 @@ body{
         padding-inline: 1rem;
 
         cursor: pointer;
+        text-decoration: none;
     }
 
     .add-student-button:hover{
         background-color: hsla(221, 13%, 28%, 0.9);
+        text-decoration: none;
     }
 }
 

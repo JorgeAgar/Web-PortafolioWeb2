@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Student Portfolio Manager</title>
+        <link rel="stylesheet" href="../styles/addstudent.css">
+    </head>
+
+    <body>
+        <div class="main-container">
+            <button id="back_button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="m12 19-7-7 7-7"></path>
+                    <path d="M19 12H5"></path>
+                </svg>
+                Back
+            </button>
+            <div class="form-container">
+                <h1>Add New Student</h1>
+                <form action="#" id="add_student_form">
+                    <div class="form-items">
+                        <div class="form-item code-box">
+                            <label for="code">Student Code (ID) *</label>
+                            <input type="text" id="code" name="code" required placeholder="e.g., S001">
+                        </div>
+                        <div class="form-item name-box">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-item email-box">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="john.doe@example.com">
+                        </div>
+                        <div class="form-item github-box">
+                            <label for="github">GitHub Link</label>
+                            <input type="url" id="github" name="github" placeholder="https://github.com/username">
+                        </div>
+                        <div class="form-item photo-box">
+                            <label for="photo">Photo URL</label>
+                            <input type="url" id="photo" name="photo" placeholder="https://example.com/photo.jpg">
+                        </div>
+                        <div class="form-item description-box">
+                            <label for="description">Description</label>
+                            <textarea name="description" id="description" placeholder="Brief description about the student..."></textarea>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button id="cancel_button" class="button">Cancel</button>
+                        <button id="save_button" class="button">Save Student</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
