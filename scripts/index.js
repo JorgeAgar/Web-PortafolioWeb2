@@ -18,10 +18,6 @@ async function renderStudents(){
         if(student.email.trim().length != 0){
             clone.querySelector('.student-email').textContent = student.email;
         }
-        // if(student.github == null || student.github.trim().length == 0){
-        //     clone.removeChild(clone.querySelector('.github-link'));
-        // }
-        console.log(clone);
 
         studentsContainer.appendChild(clone);
         
