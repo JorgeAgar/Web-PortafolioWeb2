@@ -9,11 +9,20 @@ async function renderStudents(){
         const clone = template.content.cloneNode(true);
         
         clone.querySelector('.student-name').textContent = student.name;
-        clone.querySelector('.student-id').textContent = `ID: ${student.code}`;
-        clone.querySelector('.student-email').textContent = student.email;
+        clone.querySelector('.student-id').innerHTML = `<span style="font-weight: bold; color: black;">ID: </span>${student.code}`;
         clone.querySelector('.student-image').src = student.photo;
         clone.querySelector('.github-link').href = student.github;
-        
+        if(student.description.trim().length != 0){
+            clone.querySelector('.student-description').textContent = student.description;
+        }
+        if(student.email.trim().length != 0){
+            clone.querySelector('.student-email').textContent = student.email;
+        }
+        // if(student.github == null || student.github.trim().length == 0){
+        //     clone.removeChild(clone.querySelector('.github-link'));
+        // }
+        console.log(clone);
+
         studentsContainer.appendChild(clone);
         
     });
