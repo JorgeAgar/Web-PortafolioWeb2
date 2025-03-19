@@ -16,12 +16,13 @@
                 Back
             </button>
             <div class="form-container">
-                <h1>Add New Student</h1>
+                <h1>Edit Student</h1>
                 <form action="#" id="student_form">
                     <div class="form-items">
                         <div class="form-item code-box">
                             <label for="code">Student Code (ID) *</label>
-                            <input type="text" id="code" name="code" required placeholder="e.g., S001">
+                            <input type="text" id="code" name="code" required placeholder="e.g., S001" disabled>
+                            <p class="code-restriction-text">Student code cannot be changed after creation</p>
                         </div>
                         <div class="form-item name-box">
                             <label for="name">Full Name *</label>
@@ -52,6 +53,6 @@
             </div>
         </div>
         <script type="text/javascript" src="../scripts/api.js"></script>
-        <script type="text/javascript" src="../scripts/addstudent.js"></script>
+        <script type="text/javascript" src="../scripts/editstudent.js"></script>
     </body>
 </html>

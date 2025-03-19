@@ -19,6 +19,10 @@ async function renderStudents(){
             clone.querySelector('.student-email').textContent = student.email;
         }
 
+        clone.querySelector('.edit').onclick = () => {
+            window.location.href = "html/editstudent.html?code=" + student.code;
+        }
+
         studentsContainer.appendChild(clone);
         
     });

@@ -73,7 +73,7 @@
         margin: 0;
     }
 
-    #add_student_form{
+    #student_form{
         .form-items{
             box-sizing: border-box;
             padding: 1.5rem;
@@ -133,6 +133,12 @@
 
             .code-box{
                 grid-area: code;
+
+                .code-restriction-text{
+                    font-size: .75rem;
+                    margin-top: .5rem;
+                    color: gray;
+                }
             }
 
             .name-box{
