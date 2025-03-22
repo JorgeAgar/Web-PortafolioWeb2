@@ -15,10 +15,9 @@ async function fillStudentInfo(){
     resume.querySelector('.student-header-email').textContent = student.email;
     resume.querySelector('.resume-about').textContent = student.description;
     resume.querySelector('.student-footer-name').textContent = student.name;
-    resume.querySelector('.student-footer-name').textContent = student.name;
     resume.querySelector('.student-footer-code').textContent = "Student ID: " + student_code;
     resume.querySelector('.student-footer-github').href = student.github_link;
-    resume.querySelector('.student-footer-email').textContent = student.email;
+    resume.querySelector('.student-footer-email').href = "mailto:" + student.email;
 }
 
 fillStudentInfo();
