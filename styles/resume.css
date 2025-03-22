@@ -161,6 +161,17 @@
             font-size: 1.25rem;
             line-height: 1.75rem;
             margin-bottom: 1rem;
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            svg{
+                width: 1.25rem;
+                height: 1.25rem;
+                margin-right: .5rem;
+            }
         }
 
         .resume-about{
@@ -175,6 +186,13 @@
             font-size: 1.25rem;
             line-height: 1.75rem;
             margin-bottom: 1rem;
+        }
+
+        .resume-tech-list{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 1rem 1rem;
         }
     }
 
@@ -283,9 +301,53 @@
             align-items: center;
         }
     }
+
+    #resume-container .resume-technologies-container .resume-tech-list{
+        grid-template-columns: 1fr;
+    }
 }
 
 .resume-tech-notechlabel{
     color: hsl(220, 9%, 46%);
     font-style: italic;
+}
+
+.tech-item-container{
+    padding: .75rem;
+    border-radius: .75rem;
+    background-color: hsl(220, 14%, 96%);
+
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: .75rem;
+    align-items: center;
+    justify-content: flex-start;
+
+    .tech-item-logo{
+        border-radius: .25rem;
+        height: 2.5rem;
+        width: 2.5rem;
+
+        overflow-clip-margin: content-box;
+        overflow: clip;
+        object-fit: contain;
+    }
+
+    .tech-item-name{
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        margin: 0;
+    }
+
+    .tech-star{
+        width: 1rem;
+        height: 1rem;
+        color: hsl(220, 9%, 46%);
+    }
+
+    .ticked-star{
+        color: rgb(234, 179, 8);
+        fill: rgb(234, 179, 8);
+    }
 }
