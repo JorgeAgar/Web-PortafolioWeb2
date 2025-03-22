@@ -1,0 +1,48 @@
+.main-container{
+    margin: auto;
+    margin-top: 2rem;
+    max-width: 1400px;
+}
+
+#back_button{
+    font-weight: bold;
+    background-color: transparent;
+
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: .75rem;
+    border-style: none;
+
+    svg{
+        width: 1rem;
+        height: 1rem;
+    }
+    cursor: pointer;
+}
+
+#back_button:hover{
+    background-color: hsl(220, 14%, 92%);
+}
+
+#details-container{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+}
+
+.student-info{
+    border-width: 1px;
+    border-radius: .75rem;
+    border-style: solid;
+    border-color: hsl(220, 13%, 91%);
+    padding: 1.5rem;
+
+    .student-info-label{
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .student-info-top{
+        
+    }
+}
