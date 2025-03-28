@@ -23,6 +23,10 @@ async function renderStudents(){
             window.location.href = "html/editstudent.html?code=" + student.code;
         };
 
+        clone.querySelector('.details').onclick = () => {
+            window.location.href = "html/details.html?code=" + student.code;
+        };
+
         clone.querySelector('.resume').onclick = () => {
             window.location.href = "html/resume.html?code=" + student.code;
         };
