@@ -266,7 +266,7 @@
             cursor: pointer;
         }
 
-        #add_tech_button{
+        #add_tech_button:hover{
             background-color: hsl(220, 13%, 28%, .9);
         }
     }
