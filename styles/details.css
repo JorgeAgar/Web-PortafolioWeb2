@@ -250,6 +250,7 @@
             font-size: .875rem;
             line-height: 1.25rem;
             padding-inline: .75rem;
+            text-wrap-mode: nowrap;
 
             border-radius: .75rem;
             border-style: hidden;
@@ -264,6 +265,12 @@
                 vertical-align: middle;
             }
             cursor: pointer;
+        }
+
+        .disabled{
+            opacity: 0.5;
+            cursor: default;
+            pointer-events: none;
         }
 
         #add_tech_button:hover{
@@ -332,12 +339,109 @@
 .tech-item-container{
     padding: 1rem;
     border-radius: .75rem;
-    border-color: hsl(220, 13%, 91%);
-    border-width: 1px;
-    border-style: solid;
+    border-style: hidden;
+    background-color: hsl(220, 14%, 96%);
 
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+
+    .tech-item-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: .75rem;
+        align-items: center;
+
+        .tech-item-logo{
+            object-fit: contain;
+            border-radius: .25rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            margin: 0;
+        }
+
+        .tech-item-namerating{
+            display: flex;
+            flex-direction: column;
+            gap: .25rem;
+            align-items: flex-start;
+
+            .tech-item-name{
+                margin: 0;
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                font-weight: 500;
+            }
+
+            .tech-item-rating{
+                .tech-star{
+                    width: 1rem;
+                    height: 1rem;
+                    color: hsl(220, 9%, 46%);
+                }
+            
+                .ticked-star{
+                    color: rgb(234, 179, 8);
+                    fill: rgb(234, 179, 8);
+                }
+            }
+        }
+
+    }
+
+    .tech-item-buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: flex-end;
+        align-items: center;
+
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 2rem;
+            height: 2rem;
+
+            background-color: transparent;
+            margin: 0;
+            border-style: hidden;
+            border-radius: .75rem;
+
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: hsl(220, 14%, 92%);
+        }
+
+        .tech-item-edit-button{
+            svg{
+                width: 1rem;
+                height: 1rem;
+                color: hsl(222, 84%, 5%);
+            }
+        }
+
+        .tech-item-delete-button{
+            svg{
+                width: 1rem;
+                height: 1rem;
+                color: red;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    #details-container{
+        flex-flow: column;
+
+        .student-info{
+            width: fit-content;
+        }
+    }
 }
