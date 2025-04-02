@@ -1,0 +1,105 @@
+#background-muter{
+    width: 100%;
+    height: 101%;
+    z-index: 5;
+    background-color: #000c;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.hidden{
+    display: none;
+}
+
+.edit-tech-container{
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+    border-radius: .75rem;
+    padding: 1.5rem;
+
+    h2{
+        margin: 0;
+        font-size: 1.125rem;
+        font-weight: 600;
+    }
+
+    .edit-tech-tech-inforating{
+        margin: 1rem 0;
+
+        .edit-tech-tech-info{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .75rem;
+
+            padding: .5rem;
+            border-radius: .75rem;
+            background-color: hsl(220, 14%, 96%);
+
+            .edit-tech-tech-logo{
+                object-fit: contain;
+                border-radius: .25rem;
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            .edit-tech-tech-name{
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                font-weight: 500;
+            }
+        }
+
+        .edit-tech-rating-container{
+            h3{
+                font-size: .875rem;
+                line-height: 1.25rem;
+                font-weight: 500;
+            }
+        }
+        
+    }
+
+    .edit-tech-buttons{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: .5rem;
+
+        .edit-tech-cancel{
+            font-size: .875rem;
+            line-height: 1.25rem;
+            font-weight: 600;
+            padding: .5rem 1rem;
+
+            background-color: white;
+            color: hsl(222, 84%, 5%);
+
+            border-color: hsl(220, 13%, 91%);
+            border-width: 1px;
+            border-style: solid;
+            border-radius: .75rem;
+        }
+
+        .edit-tech-save{
+            font-size: .875rem;
+            line-height: 1.25rem;
+            font-weight: 600;
+            padding: .5rem 1rem;
+
+            background-color: hsl(220, 13%, 28%);
+            border-radius: .75rem;
+            border-style: hidden;
+            color: white;
+        }
+    }
+}

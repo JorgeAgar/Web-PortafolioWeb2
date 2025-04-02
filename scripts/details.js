@@ -5,6 +5,9 @@ const add_tech_button = document.getElementById("add_tech_button");
 add_tech_button.onclick = addTechnology();
 document.getElementById("back_button").onclick = () => {window.location.href = "../index.html";};
 
+const background_muter = document.getElementById("background-muter");
+
+
 async function loadStudentInfo(){
     const student = await api.getStudentByCode(student_code);
 
@@ -38,6 +41,7 @@ async function loadStudentTechnologies(){
 }
 
 const tech_template = document.getElementById("tech_item_template");
+const edit_tech_template = document.getElementById("edit_tech_template");
 
 function buildTechCard(tech_item){
     const clone = tech_template.content.cloneNode(true);
@@ -46,13 +50,42 @@ function buildTechCard(tech_item){
     for(let i = 0; i < tech_item.level; i++){
         clone.querySelector('.tech-item-rating').children[i].classList.add("ticked-star");
     }
-    clone.querySelector('.tech-item-edit-button').onclick = editTechnology(tech_item);
+    clone.querySelector('.tech-item-edit-button').onclick = async () => {
+        console.log("edit tech");
+        const clone = edit_tech_template.content.cloneNode(true);
+        clone.querySelector('.edit-tech-tech-name').textContent = tech_item.technology.name;
+        clone.querySelector('.edit-tech-tech-logo').src = tech_item.technology.image;
+
+        clone.querySelector('.edit-tech-exit').onclick = () => {
+            document.body.removeChild(document.body.querySelector('.edit-tech-container'));
+            background_muter.classList.add("hidden");
+        };
+        clone.querySelector('.edit-tech-cancel').onclick = () => {
+            document.body.removeChild(document.body.querySelector('.edit-tech-container'));
+            background_muter.classList.add("hidden");
+        };
+
+        document.body.appendChild(clone);
+        background_muter.classList.remove("hidden");
+    };
     clone.querySelector('.tech-item-delete-button').onclick = deleteTechnology(tech_item);
     return clone;
 }
 
 async function editTechnology(tech){
+    console.log("edit tech");
+    // const clone = edit_tech_template.content.cloneNode(true);
+    // clone.querySelector('.edit-tech-tech-name').textContent = tech.technology.name;
+    // clone.querySelector('.edit-tech-tech-logo').src = tech.technology.image;
 
+    // clone.querySelector('.edit-tech-exit').onclick = () => {
+    //     document.body.removeChild(document.body.querySelector('.edit-tech-container'));
+    // };
+    // clone.querySelector('.edit-tech-cancel').onclick = () => {
+    //     document.body.removeChild(document.body.querySelector('.edit-tech-container'));
+    // };
+
+    // document.body.appendChild(clone);
 }
 
 async function deleteTechnology(tech){

@@ -1,8 +1,11 @@
+body{
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 'Segoe UI Symbol';
+}
+
 .main-container{
     margin: auto;
     margin-top: 2rem;
     max-width: 1400px;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 'Segoe UI Symbol';
 }
 
 #back_button{
